@@ -3,79 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Todo App</title>
+  <title>täglichs todo</title>
   <link rel="stylesheet" href="/style.css">
 
   <style>
 
 
 
-    section {
-      margin-bottom: 20px;
-    }
-
-    .todoItem {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: fit-content;
-      gap: 12px;
-      padding: 1px 40px;
-      background-color: white;
-      margin-bottom: 8px;
-    }
-
-
-
-
-
-    .emojipicker--container{
-        background: #E6DADA;
-
-        padding: 20px;
-        border-radius: 20px;
-        box-sizing: border-box;
-        width: 95%;
-        height: 300px;
-        overflow: scroll;
-
-        position: fixed;
-        top: 8px;
-
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .emojiSmall{
-        font-size: 28px;
-    cursor: pointer;
-    margin: 0px;
-    padding: 0px;
-
-    }
-
-    #todo--container{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
   </style>
 </head>
 <body>
   <section class="inputContainer">
 
-    <input type="text" id="inputEmoji" placeholder="emoji" autocomplete="off"/>
-    <input type="text" id="inputName" placeholder="name" />
-    <input type="text" id="inputTime" placeholder="time" />
-    <input type="text" id="inputPoints" placeholder="points" />
+    <input type="text" id="inputEmoji" placeholder="🐳" autocomplete="off"/>
+    <input type="text" id="inputName" placeholder="was" />
+    <input type="text" id="inputTime" placeholder="wielang" />
+    <input type="text" id="inputPoints" placeholder="wieviel" />
     <button id="sendButton">add</button>
 
   </section>
 
-  <section id="todo--container">
+  <section id="todo--container" class="crListContainer">
     <!-- todos go here -->
   </section>
 
@@ -108,7 +56,7 @@
       todoItem.innerHTML = `
             <div class='crEmoji'>${row.emoji}</div>
             <h2 class='crName'>${row.name}</h2>
-            <div class='crTime'>${row.time}</div>
+            <div class='crTime'>${row.time} min</div>
             <div class='crPoints'>${row.points}</div>
             <button class='doneBtn'>done</button>
       `;
